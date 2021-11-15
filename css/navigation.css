@@ -1,0 +1,120 @@
+/*Typografi*/
+h1, h2, h3, h4, h5, h6, .menu-items{
+    font-family: 'Times New Roman';
+}
+.menu-items{
+    font-size: 0.8rem;
+}
+
+/*Layout */
+/* .flex-all{
+    display:flex;
+    justify-content: space-between;
+}
+ */
+
+
+/* MENU*/
+.main-menu{
+    position: relative;
+    margin-top: -18px;
+}
+/* .main-menu{
+    position: relative;
+    bottom: 5px;
+    margin-top: -18px;
+    margin-left:-28px;
+} */
+
+.burger-label{
+    width: 30px;
+    display: block;
+    margin-left: -50px;
+}
+.burger{
+    display: block;
+    height: 3px;
+    background: #FFFFFF;
+    margin-bottom: 6px;
+    transition: all 0.3s;
+
+}
+.burger-check{
+    display: none;
+}
+
+.menu-items{
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    position: absolute;
+    /* top: 29px; */
+    transform:scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s;
+    z-index: 2;
+    cursor: pointer;
+    padding-left: 19px; 
+
+}
+.menu-item a{
+    color:white ;
+    text-decoration: none;
+    padding: 8px;
+}
+.dm-nav1{
+    list-style-type: none;
+    /* padding: 0px; */
+    /* margin-left: -316px; */
+    background-color: #000000;
+    margin-left: -359px;
+    margin-right: -16px;
+}
+.menu-item a.selected{
+    text-decoration: underline;
+}
+
+.burger-check:checked ~ .menu-items{
+    transform: scaleY(1.5);
+}
+.burger-check:checked ~ .burger-label .burger-1{
+    transform: rotate(45deg);
+}
+.burger-check:checked ~ .burger-label .burger-2{
+    transform: rotate(-45deg);
+    position: relative;
+    top: -9px;
+}
+
+@media screen and (min-width:768px){
+    .burger-label{
+        display: none;
+    }
+    .menu-items{
+        display: block;
+        position: static;
+        transform: scaleY(1);
+        display: flex; 
+        min-width: 400px;
+        justify-content: space-between;
+        
+    }
+    .dm-nav1{
+        display: flex;
+        padding-left: 226px;
+    }
+    
+    .main-menu{
+        position: relative;
+        /* bottom: 5px; */
+        margin-top: 0px;
+    }
+}
+@media screen and (min-width:1200px){
+    
+    .dm-nav1{
+        padding-left: 126px;
+        font-size: 20px;
+    }
+    
+}
